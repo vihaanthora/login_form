@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>IIT Indore - Register</title>
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+	</head>
+	<body>
+		<div class="register">
+			<h1>IIT Indore - Register</h1>
+			<div class="links">
+				<a href="{{ url_for('login') }}">Login</a>
+				<a href="{{ url_for('register') }}" class="active">Register</a>
+			</div>
+			<form action="{{ url_for('register') }}" method="post" autocomplete="off">
+				<label for="user_id">
+					<i class="fas fa-user"></i>
+				</label>
+				<input type="text" name="user_id" placeholder="User ID" id="user_id" required>
+				<label for="mobile_no">
+					<i class="fas fa-phone"></i>
+				</label>
+				<input type="tel" pattern = "[0-9]{10}" name="mobile_no" placeholder="Mobile Number" id="mobile_no" required>
+				<label for="password">
+					<i class="fas fa-lock"></i>
+				</label>
+				<input type="password" name="password" placeholder="Password" id="password" required>
+				<label class="eye">
+					<i onclick="show('password', this)" class="fas fa-eye-slash" id="display"></i>
+				</label>
+				<label for="confirm_password">
+					<i class="fas fa-check"></i>
+				</label>
+				<input type="password" name="confirm_password" placeholder="Confirm Password" id="confirm_password" required>
+				<label class="eye">
+					<i onclick="show('confirm_password', this)" class="fas fa-eye-slash" id="display"></i>
+				</label>
+				<div class="msg">{{ msg }}</div>
+				<input type="submit" value="Register">
+			</form>
+		</div>
+		<script type="text/javascript" src="{{ url_for('static', filename='js/app.js') }}"></script>
+	</body>
+	</html>
