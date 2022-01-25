@@ -13,7 +13,7 @@
 				<a href="{{ url_for('login') }}" class="active">Login</a>
 				<a href="{{ url_for('register') }}">Register</a>
 			</div>
-			<form action="{{ url_for('login') }}" method="post">
+			<form action="{{ url_for('login') }}" method="post" autocomplete="off">
 				<label for="user_id">
 					<i class="fas fa-user"></i>
 				</label>
@@ -22,8 +22,8 @@
 					<i class="fas fa-lock"></i>
 				</label>
 				<input type="password" name="password" placeholder="Password" id="password" required>
-				<label class="eye">
-					<i onclick="show('password', this)" class="fas fa-eye-slash" id="display"></i>
+				<label onclick="show('password', this)" class="eye">
+					<i class="fas fa-eye-slash" id="display"></i>
 				</label>
 				<div class="msg">{{ msg }}</div>
 				<input type="submit" value="Login">

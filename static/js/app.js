@@ -6,6 +6,6 @@ function show(id, x) {
     } else {
         a.type = "password";
     }
-    x.classList.toggle("fa-eye")
-    x.classList.toggle("fa-eye-slash");
+    x.firstElementChild.classList.toggle("fa-eye")
+    x.firstElementChild.classList.toggle("fa-eye-slash");
 }
