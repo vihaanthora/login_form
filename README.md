@@ -3,7 +3,7 @@ This project allows a user to register himself for a student dashboard website, 
 ## Tech Stacks
 1. HTML 5 - Markup Languange for building structure of web pages
 2. Python 3.8 - Scripting Language for backend
-3. Django - Python based web framework
+3. Flask - Python based web framework
 4. CSS - To add styles to the web pages
 5. Javascript - To add dynamic responses to the web pages
 
